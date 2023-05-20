@@ -1,0 +1,86 @@
+.divPrincipalCard {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 420px;
+  box-shadow: 0 2px 6px #e9d2d2e0;
+  border-radius: 8px;
+  background-color: gray;
+  padding: 8px;
+}
+
+.divButtonCierre{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.divButtonCierre h3{
+  color: yellow;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+}
+
+.imgCard  {
+  width: 270px;
+  height: 270px;
+  border-radius: 4px;
+  margin-top: 5px;
+  box-shadow: 0 2px 6px #e9d2d2e0;
+
+}
+
+.botonCierre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: hsl(0, 100%, 50%);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform .3s;
+}
+
+.botonCierre:hover {
+  transform: scale(1.3);
+}
+
+.h2Name {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: yellow;
+  top: -35px;
+  right: 10px;
+  width: 80%;
+  height: auto;
+  margin-left: 15px;
+  font-size: 0.9rem;
+  border-radius: 3px;
+}
+.h2Name:hover{
+  font-size: 1.2rem;;
+}
+
+.divSubtitulos {
+  display: flex;
+  flex-direction: row;
+  background-color:gray;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 5px 15px 5px 15px;
+  position: relative;
+  top: -14px;
+  box-shadow: 0 2px 6px #e9d2d2e0;
+}
+.divSubtitulos:hover{
+  transform: scale(1.1);
+}

@@ -1,0 +1,101 @@
+.divFondo{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-image: url('../../asset/rick-and-morty-trippy-parallel-universe-qvw8fevdnlpo8xp9.jpg');
+  background-size: contain;
+}
+
+.divPrincipal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  height: 50%;
+  background-color: hsl(253, 94%, 7%);
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid aqua;
+  box-shadow: 0 8px 6px #e9d2d2e0;
+}
+.imgTitulo{
+  display: flex;
+  background-image: url('../../asset/2.jpg');
+  background-size: cover;
+  height: 250px;
+  width: 95%;
+  border-radius: 12px;
+  box-shadow: 0 6px 6px #e9d2d2e0;
+}
+.imgTitulo:hover{
+  transform: scale(1.3);
+}
+.divImg{
+  margin: 15px 0px 15px 0px;
+  width: 67%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: url('../../asset/rick-and-morty.jpg');
+  background-size: cover;
+  border: 2px solid aqua;
+  box-shadow: 0 4px 8px #e9d2d2e0;
+}
+.divImg:hover{
+  transform: scale(1.3);
+}
+
+.inputForm{
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  border-color: white;
+}
+.inputForm:hover{
+  transform: scale(1.1);
+}
+
+.labelForm{
+  color:antiquewhite;
+  font-size: 1.1rem;
+  text-align: end;
+  align-items: center;
+  width: auto;
+}
+
+.pError{
+  color: red;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 6px;
+
+}
+
+.divLabelInput{
+  display: grid;
+  grid-template-columns: auto 70%;
+  gap: 5px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #0c0a0a;
+  background-color: #ffee00;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffbb00;
+  transform: scale(1.1)
+}

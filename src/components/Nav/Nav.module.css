@@ -1,0 +1,51 @@
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ff6c00;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff4500;
+  transform: scale(1.1);
+}
+
+.button:active {
+  background-color: #e63b00;
+}
+
+.divPrincipal{
+  display: flex;
+  flex-direction: row;
+  gap: 55px;
+  justify-content: space-between;
+  width: auto;
+}
+
+.buttonExit{
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: hsl(357, 100%, 50%);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonExit:hover {
+  background-color: rgb(255, 0, 128);
+  transform: scale(1.1);
+}
