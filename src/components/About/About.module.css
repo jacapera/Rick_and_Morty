@@ -4,7 +4,7 @@
   /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
 }
 .divImg{
-  background-image: url('../../asset/yo.jpg');
+  /* background-image: url('../../asset/yo.jpg'); */
   background-size: cover;
   width: 290px;
   height: 400px;
