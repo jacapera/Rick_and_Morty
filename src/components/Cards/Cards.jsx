@@ -1,8 +1,6 @@
 import Card from '../Card/Card';
 import styleCards from '../Cards/Cards.module.css';
 
-
-
 export default function Cards(props) {
    //console.log(props)
    return <div className={styleCards.divPrincipalCards}>

@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Get ShantellSans';
+  src: url('../../font/ShantellSans-Italic-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf') format('truetype');
+  /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
+}
+.divImg{
+  background-image: url('../../asset/yo.jpg');
+  background-size: cover;
+  width: 290px;
+  height: 400px;
+  background-color: antiquewhite;
+}
 .divPrincipal {
+  font-family: 'Get ShantellSans';
   background-color: aquamarine;
 }

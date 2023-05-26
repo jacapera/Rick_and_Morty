@@ -7,7 +7,7 @@
    justify-content: flex-start;
    width: 100%;
    height: 100vmax;
-   padding: 15px;
+   /* padding: 15px; */
    background-image: url('./asset/escape-rick-and-morty-pc-4k-lvv41lzbwakk5s1b.jpg');
    background-size: contain;
 }
@@ -16,10 +16,32 @@ h2{
    font-size: 18px;
 }
 
-hr{
+.hr{
    color: white;
    width: 100%;
    height: 3px;
    background-color: white;
-
+   margin: 10px;
 }
+
+.scrollableDiv {
+   flex-grow: 1;
+   overflow-y: auto;
+   position: relative; /* Establece la posición relativa */
+}
+
+.scrollableDiv::before {
+   content: "";
+   position: sticky;
+   top: 0;
+   z-index: 1;
+   height: 0; /* Ajusta la altura según tus necesidades */
+}
+
+.fixed {
+   position: fixed;
+   top: 0;
+   left: 0
+   /* Estilos para el componente Nav cuando está fijo */
+}
+

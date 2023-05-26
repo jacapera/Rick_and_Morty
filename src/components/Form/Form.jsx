@@ -46,8 +46,8 @@ export default function Form(props) {
             <input className={styleForm.inputForm} type="password" name='password' value={userData.password} onChange={handleChange}/>
           </div>
           <p className={styleForm.pError}>{errors.password ? errors.password : null}</p>
-          <hr style={{backgroundColor:'aqua', margin:'20px', width:'100%'}} />
-          <button className={styleForm.button} type='submit'>Submit</button>
+          <hr style={{backgroundColor:'aqua', margin:'7px', width:'100%', height:'1px'}} />
+          <button className={styleForm.button} type='submit'>Entrar</button>
         </form>
       </div>
     </div>

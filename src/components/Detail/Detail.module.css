@@ -1,17 +1,26 @@
 
-
+@font-face {
+  font-family: 'Get NothingYouCouldDo';
+  src: url('../../font/NothingYouCouldDo-Regular.ttf') format('truetype');
+  /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
+}
 .divPrincipal{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: start;
-  background-color: bisque;
+  background-color: rgba(10, 1, 59, 0.85);
   border-radius: 8px;
   width: auto;
   padding: 10px;
-  border: 3px solid hsla(41, 100%, 50%, 0.897);
+  border: 3px solid rgba(255, 174, 0, 0.897);
+  color: aqua;
+  font-weight: bold;
 }
 .divInfo{
+  font-family: 'Get NothingYouCouldDo';
+  font-size: 2.5rem;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -21,10 +30,13 @@
   text-align: center;
   gap: 9px;
 }
-
+.divInfo h2{
+  font-size: 2rem;
+}
 .img{
   border-radius: 9px;
   margin: 10px;
+  border: 3px solid rgba(255, 174, 0, 0.897);
 }
 
 .divImg{

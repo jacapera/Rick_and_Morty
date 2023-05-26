@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('../../font/get_schwifty.ttf') format('truetype');
+    /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
+}
+@font-face {
+    font-family: 'Get Creepster';
+    src: url('../../font/Creepster-Regular.ttf') format('truetype');
+    /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
+}
+@font-face {
+    font-family: 'Get Akronim';
+    src: url('../../font/Akronim-Regular.ttf') format('truetype');
+    /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
+}
+@font-face {
+    font-family: 'Get IndieFlower';
+    src: url('../../font/IndieFlower-Regular.ttf') format('truetype');
+    /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
+}
+@font-face {
+    font-family: 'Get Nosifer';
+    src: url('../../font/Nosifer-Regular.ttf') format('truetype');
+    /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
+}
+@font-face {
+    font-family: 'Get ShantellSans';
+    src: url('../../font/ShantellSans-Italic-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf') format('truetype');
+    /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
+}
+.titulo {
+    font-family: 'Get Nosifer';
+    color: rgb(15, 6, 97);
+    text-align: center;
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 10px;
+    -webkit-text-stroke: 1px aqua;
+
+}
+.divPrincipalFavorites {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+.divSelect{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+}
+.divSelect select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border-radius: 7px;
+    font-family: 'Get ShantellSans';
+    font-size: 1.6rem;
+    border: 2px solid aqua;
+    background-color: #4006aca6;
+    color: aqua;
+    font-weight: bold;
+}
+option{
+    background-color: rgba(0, 0, 0, 0.5); color: white;
+}
+@media screen and (min-width: 320px){
+    .divPrincipalFavorites {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+   .titulo{
+    font-size: 2.5rem;
+   }
+}
+
+@media screen and (min-width: 1221px){
+    .divPrincipalFavorites{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 445px;
+    }
+    .titulo{
+        font-size: 6rem;
+    }
+}
+@media screen and (min-width: 1521px){
+    .divPrincipalFavorites{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 445px;
+    }
+    .titulo{
+        font-size: 6rem;
+    }
+}
+/* @media screen and (min-width: 1321px){
+    .divPrincipalFavorites{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 445px;
+    }
+} */

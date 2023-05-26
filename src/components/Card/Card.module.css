@@ -1,12 +1,19 @@
+@font-face {
+  font-family: 'Get IndieFlower-Regular';
+  src: url('../../font/IndieFlower-Regular.ttf') format('truetype');
+  /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
+}
+
 .divPrincipalCard {
   display: flex;
   flex-direction: column;
   width: 270px;
   height: 420px;
-  box-shadow: 0 2px 6px #e9d2d2e0;
+  box-shadow: 0 4px 9px #e9d2d2e0;
   border-radius: 8px;
   background-color: gray;
   padding: 8px;
+  border: 2px solid #ffe600
 }
 
 .divButtonCierre{
@@ -53,20 +60,22 @@
 }
 
 .h2Name {
+  font-family: 'Get IndieFlower-Regular';
   display: flex;
   justify-content: center;
   position: relative;
   background-color: yellow;
-  top: -35px;
+  top: -53px;
   right: 10px;
-  width: 80%;
+  width: 85%;
   height: auto;
   margin-left: 15px;
-  font-size: 0.9rem;
+  font-size: 1.8rem;
+  font-weight: bold;
   border-radius: 3px;
 }
 .h2Name:hover{
-  font-size: 1.2rem;;
+  font-size: 1.9rem;;
 }
 
 .divSubtitulos {
@@ -83,4 +92,29 @@
 }
 .divSubtitulos:hover{
   transform: scale(1.1);
+}
+
+/* Estilos para teléfonos móviles pequeños (portrait) */
+@media screen and (max-width: 480px) {
+  /* Agrega tus estilos aquí */
+}
+
+/* Estilos para teléfonos móviles pequeños (landscape) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  /* Agrega tus estilos aquí */
+}
+
+/* Estilos para teléfonos móviles y tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Agrega tus estilos aquí */
+}
+
+/* Estilos para tablets y computadoras portátiles */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Agrega tus estilos aquí */
+}
+
+/* Estilos para computadoras de escritorio */
+@media screen and (min-width: 1200px) {
+  /* Agrega tus estilos aquí */
 }

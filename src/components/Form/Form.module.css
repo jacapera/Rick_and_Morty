@@ -12,9 +12,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 375px;
-  height: 50%;
-  background-color: hsl(253, 94%, 7%);
+  width: 40%;
+  height: 55%;
+  background-color: rgb(8, 1, 35, .65);
   padding: 10px;
   border-radius: 12px;
   border: 2px solid aqua;
@@ -24,7 +24,7 @@
   display: flex;
   background-image: url('../../asset/2.jpg');
   background-size: cover;
-  height: 250px;
+  height: 400px;
   width: 95%;
   border-radius: 12px;
   box-shadow: 0 6px 6px #e9d2d2e0;
@@ -34,7 +34,7 @@
 }
 .divImg{
   margin: 15px 0px 15px 0px;
-  width: 67%;
+  width: 60%;
   height: 100%;
   border-radius: 50%;
   background-image: url('../../asset/rick-and-morty.jpg');
@@ -58,10 +58,11 @@
 
 .labelForm{
   color:antiquewhite;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-align: end;
   align-items: center;
   width: auto;
+  font-weight: bold;
 }
 
 .pError{
@@ -77,7 +78,8 @@
   grid-template-columns: auto 70%;
   gap: 5px;
   justify-content: flex-end;
-  margin-top: 20px;
+  margin-top: 5px;
+  align-items: center;
 }
 
 .button {
@@ -93,9 +95,230 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .button:hover {
   background-color: #ffbb00;
   transform: scale(1.1)
+}
+
+/* Estilos para teléfonos móviles pequeños (portrait) */
+@media screen and (min-width: 149px) and (max-width:374px){
+  /* Agrega tus estilos aquí */
+  .divPrincipal{
+    width: 300px;
+    height: 610px;
+    padding: 5px;
+  }
+  .imgTitulo{
+    height: 180px;
+    width: 98%;
+  }
+  .imgTitulo:hover{
+    transform: scale(1.06);
+  }
+  .divImg{
+    margin-top: 15px;
+    width: 270px;
+    /* max-width: 150px; */
+    height: 100%;
+    border-radius: 50%;
+  }
+  .divImg:hover{
+    transform: scale(1.1);
+  }
+  .divLabelInput{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+  .inputForm{
+    width: 200px;
+    height: 20px;
+  }
+  .inputForm:hover{
+    transform: scale(1.1);
+  }
+  .pError{
+    font-size: 1.2rem;
+  }
+  .labelForm{
+    font-size: 1.4rem;
+  }
+}
+
+/* Estilos para teléfonos móviles pequeños (landscape) */
+@media screen and (min-width: 375px){
+  /* Agrega tus estilos aquí */
+  .divPrincipal{
+    width: 360px;
+    height: 610px;
+    padding: 5px;
+  }
+  .imgTitulo{
+    height: 200px;
+    width: 92%;
+  }
+  .imgTitulo:hover{
+    transform: scale(1.1);
+  }
+  .divImg{
+    margin-top: 15px;
+    width: 299px;
+    /* max-width: 150px; */
+    height: 100%;
+    border-radius: 50%;
+  }
+  .divImg:hover{
+    transform: scale(1.1);
+  }
+  .divLabelInput{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+  .inputForm{
+    width: 200px;
+    height: 20px;
+  }
+  .inputForm:hover{
+    transform: scale(1.1);
+  }
+  .pError{
+    font-size: 1.5rem;
+  }
+  .labelForm{
+    font-size: 1.7rem;
+  }
+}
+
+/* Estilos para teléfonos móviles y tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Agrega tus estilos aquí */
+  .divPrincipal{
+    width: 370px;
+    height: 610px;
+    padding: 5px;
+  }
+  .imgTitulo{
+    height: 220px;
+    width: 92%;
+  }
+  .imgTitulo:hover{
+    transform: scale(1.1);
+  }
+  .divImg{
+    margin-top: 15px;
+    width: 290px;
+    /* max-width: 150px; */
+    height: 100%;
+    border-radius: 50%;
+  }
+  .divImg:hover{
+    transform: scale(1.1);
+  }
+  .divLabelInput{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+  .inputForm{
+    width: 200px;
+    height: 20px;
+  }
+  .inputForm:hover{
+    transform: scale(1.1);
+  }
+}
+
+/* Estilos para tablets y computadoras portátiles */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Agrega tus estilos aquí */
+  .divPrincipal{
+    width: 370px;
+    height: 610px;
+    padding: 5px;
+  }
+  .imgTitulo{
+    height: 220px;
+    width: 92%;
+  }
+  .imgTitulo:hover{
+    transform: scale(1.1);
+  }
+  .divImg{
+    margin-top: 15px;
+    width: 290px;
+    /* max-width: 150px; */
+    height: 100%;
+    border-radius: 50%;
+  }
+  .divImg:hover{
+    transform: scale(1.1);
+  }
+  .divLabelInput{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+  .inputForm{
+    width: 200px;
+    height: 20px;
+  }
+  .inputForm:hover{
+    transform: scale(1.1);
+  }
+}
+
+/* Estilos para computadoras de escritorio */
+@media screen and (min-width: 1200px) {
+  /* Agrega tus estilos aquí */
+  .divPrincipal{
+    width: 370px;
+    height: 610px;
+    padding: 5px;
+  }
+  .imgTitulo{
+    height: 220px;
+    width: 92%;
+  }
+  .imgTitulo:hover{
+    transform: scale(1.1);
+  }
+  .divImg{
+    margin-top: 15px;
+    width: 290px;
+    /* max-width: 150px; */
+    height: 100%;
+    border-radius: 50%;
+  }
+  .divImg:hover{
+    transform: scale(1.1);
+  }
+  .divLabelInput{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+  .inputForm{
+    width: 200px;
+    height: 20px;
+  }
+  .inputForm:hover{
+    transform: scale(1.1);
+  }
+  .pError{
+    font-size: 2rem;
+  }
 }

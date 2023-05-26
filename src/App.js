@@ -8,6 +8,7 @@ import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import About from '../src/components/About/About'
 import Detail from './components/Detail/Detail';
 import Form from './components/Form/Form';
+import Favorites from './components/Favorites/Favorites';
 //import SearchBar from './components/SearchBar.jsx';
 //import characters, { Rick } from './data.js';
 
@@ -96,17 +97,21 @@ function App() {
       <div className='App'>
          {
             location.pathname !== "/" &&
-               <Nav onSearch={onSearch} onRandom={onRandom} exit={exit}/>
-         }
-         <hr />
+               <Nav
+                  onSearch={onSearch}
+                  onRandom={onRandom}
+                  exit={exit}
+               />
+            }
+            <hr className='hr' />
          {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
-
-         <Routes>
-            <Route path='/' element={<Form login={login} />}/>
-            <Route path={"/home"} element={<Cards characters={characters} onClose = {onClose} />}/>
-            <Route path={'/about'} element={ <About /> } />
-            <Route path={'/detail/:id'} element={ <Detail /> } />
-         </Routes>
+            <Routes>
+               <Route path='/' element={<Form login={login} />}/>
+               <Route path={"/home"} element={<Cards characters={characters} onClose = {onClose} />}/>
+               <Route path={'/about'} element={ <About /> } />
+               <Route path={'/detail/:id'} element={ <Detail /> } />
+               <Route path={'/favorites'} element={ <Favorites /> } />
+            </Routes>
 
          {/* <Card
             id={Rick.id}

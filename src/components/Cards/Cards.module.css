@@ -1,9 +1,56 @@
 .divPrincipalCards {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  padding: 15px;
-  gap: 20px;
+  
+}
+
+@media screen and (min-width: 320px){
+  .divPrincipalCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1191px){
+  .divPrincipalCards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 445px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1495px){
+  .divPrincipalCards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 445px;
+    grid-row-end: auto;
+  }
+}
+@media screen and (min-width: 1721px){
+  .divPrincipalCards{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 445px;
+  }
+  }
+  @media screen and (min-width: 2021px){
+    .divPrincipalCards{
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-auto-rows: 445px;
+    }
+}
+@media screen and (min-width: 2321px){
+  .divPrincipalCards{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 445px;
+  }
 }
