@@ -1,8 +1,6 @@
-# **💪 HW13 | React Hooks - Integration**
+# **Rick and Morty React App**
 
-## **🕒 DURACIÓN ESTIMADA**
-
-2 horas
+## **¡Wubba lubba dub dub! 🛸🔬**
 
 <br />
 
@@ -16,112 +14,79 @@
 
 ## **📝 INTRODUCCIÓN**
 
-En esta homework crearemos dos cosas que harán más completa nuestra aplicación 😄.
-
--  Haremos un **filtrado** para nuestros personajes favoritos. Vamos a filtrar todos los personajes según su género: **`Male`**, **`Female`**, **`Genderless`** y **`unknown`**.
-
--  Por otro lado haremos un **ordenamiento** para nuestros personajes favoritos. Vamos a ordenar todos los personajes por su **id** (de mayor a menor y viceversa).
+Bienvenido al increíble mundo de Rick and Morty en forma de una aplicación web desarrollada con React y Redux. Esta aplicación utiliza la API de Rick and Morty para mostrar información sobre los personajes y episodios de la serie.
 
 <br />
 
 ---
 
-## **📋 INSTRUCCIONES**
+## **📋 Caracteristicas**
 
-### **👩‍💻 EJERCICIO 1 | Actions**
+En esta aplicación, he aplicado varias tecnologías y conceptos interesantes:
 
-Dirígete al archivo **`actions`** y crea las siguientes funciones:
-
-1. **`filterCards`**: esta función recibe por parámetro un **gender**. Debe retornar una action con el **type** igual a "**FILTER**" y el payload será igual al parámetro recibido.
-
-2. **`orderCards`**: esta función recibe por parámetro un **orden** (será: **A**: ascendente o **D**: descendente). Debe retornar una action con el **type** igual a "**ORDER**" y el payload será igual al parámetro recibido.
-
-<br />
-
----
-
-### **👩‍💻 EJERCICIO 2 | Reducer**
-
-Dirígete al archivo **`reducer`** y sigue estos pasos:
-
-1. En tu estado inicial crea una nueva propiedad llamada **allCharacters** que debe ser igual a un arreglo vacío.
-
-2. Modificaremos el caso **ADD_FAV** de la siguiente manera:
-
-   -  Dentro de la copia de tu estado global, reemplaza la propiedad **myFavorites** por **allCharacters**.
-   -  Cuando retornes tu estado, agrega la propiedad **`allCharacters`** que también sea igual a la copia en la que agregaste el nuevo personaje.
-
-   </br >
-
-3. Crea un nuevo caso con el nombre "**FILTER**". Aquí debes crear una copia de tu estado global **allCharacters**. A partir de esta copia filtra todos aquellos personajes que tengan el mismo género que recibes por payload. Finalmente retorna una copia de tu estado, pero que la propiedad **myFavorites** sea igual a este filtrado.
-
-4. Crea un nuevo caso con el nombre "**ORDER**". Aquí vamos a ordenar nuestros personajes favoritos de forma ascendente y descendente. Para esto:
-
-   -  Crea una copia de tu estado global **allCharacters**.
-   -  Utiliza el método **`sort`** para ordenar tus personajes de acuerdo a su **id**.
-   -  Si el payload es igual a "**A**", los personajes deben ordenarse de menor a mayor.
-   -  Si el payload es igual a "**D**, los personajes deben ordenarse de mayor a menor.
-   -  Finalmente retorna tu estado global y en la propiedad **myFavorites** guarda el ordenamiento que hiciste.
-
-> [**NOTA**]: investiga en la web cómo funciona el método **`sort`**.
+   - **`Estado y Ciclo de Vida (State & Lifecycle)`**: Utilicé el estado local (state) de React para almacenar y manipular los datos necesarios en los componentes. Además, aproveché los ciclos de vida de los componentes para realizar tareas específicas en momentos determinados, como la carga inicial de datos.
+   - **`Enrutamiento (Routing)`**: mplementé enrutamiento utilizando React Router para navegar entre diferentes páginas y mostrar componentes específicos según la URL actual.
+   - **`Formularios (Forms)`**: Diseñé un formulario interactivo para permitir a los usuarios hacer un login para ingresar a la App. Utilicé la gestión de estado local para manejar los datos ingresados por el usuario y ejecutar acciones en consecuencia.
+   - **`Redux`**: Utilicé Redux para la gestión del estado global de la aplicación. Implementé acciones, reducers y el store de Redux para manejar el estado compartido entre los diferentes componentes.
+   - **`Hooks`**: Hice uso extensivo de los Hooks de React, como useState, useEffect y useDispatch, para gestionar el estado local de los componentes, realizar efectos secundarios y enviar acciones a Redux.
+   - **`CSS`**: Utilicé CSS Modules para dar estilo a la aplicación y crear una interfaz atractiva y amigable para el usuario. Aplicando los principios de responsive
 
 <br />
 
 ---
 
-### **👩‍💻 EJERCICIO 3 | Filtro & Ordenamiento**
+### **Capturas de pantalla**
+Aqui tienes algunas capturas de pantalla de la aplicación:
 
-Dirígete a tu componente **`Favorites`**. Dentro de él deberás:
+<br />
+<img src="./src/asset/Form.jpg" alt="" />
 
-1. Crea una etiqueta **`select`**. Dentro de este selector:
+**Formulario para ingresar a la App**
 
-   -  Crea una etiqueta **`option`** con el atributo **value** igual a **"A"** (ascendente).
-   -  Crea una etiqueta **`option`** con el atributo **value** igual a **"D"** (descendente).
+<br />
+<img src="./src/asset/Nav.jpg" alt="" />
 
-   ```html
-   <option value="Ascendente">Ascendente</option>
+**Barra de navegación**
+
+<br />
+<img src="./src/asset/Home.jpg" alt="" />
+
+**Presentación de las Cards**
+
+<br />
+<img src="./src/asset/Detail.jpg" alt="" />
+
+**Detalles del personaje**
+
+### ¿Cómo ejecutar la aplicación?
+<br />
+
+1. Clona este repositorio en tu máquina local.
+   ```bash
+   git clone https://github.com/tu-usuario/rick-and-morty-app.git
    ```
-
-2. Crea una segunda etiqueta **`select`**. Dentro de este selector deberás:
-
-   -  Crear 4 etiquetas **`option`**. Cada una con su atributo **value** igual a los siguientes valores: **Male**, **Female**, **Genderless** y **unknown**.
-
-   ```html
-   <option value="Male">Male</option>
+2. Navega al directorio del proyecto.
+   ```bash
+   cd rick-and-morty-app
    ```
+3. Instala las dependencias.
+   ```bash
+   npm install
+   ```
+4. Inicia la aplicación.
+   ```bash
+   npm start
+   ```
+5. Abre tu navegador web y ve a http://localhost:3000 para ver la aplicación en acción.
 
-> [**NOTA**]: ten en cuenta que la propiedad **`unknown`** debe escribirse en minúsculas, ya que esa el la forma como proviene de la API.
+## Agradecimientos
+¡Un agradecimiento especial a Rick Sanchez y Morty Smith por inspirar esta aplicación! 🙌
 
-3. Importa las actions que creaste en esta homework y el hook **`useDispatch`**.
+## Recursos adicionales
+- [Documentación de React(en español)](https://es.react.dev/)
+- [Documentación de Redux(en español)](https://es.redux.js.org/)
+- [Documentación de React Router](https://reactrouter.com/en/dev)
 
-4. Crea una función llamada **handleOrder**. En su interior solo debe despachar la action **`orderCards`** pasándole como argumento **`e.target.value`**.
 
-5. Crea una función llamada **handleFilter**. En su interior solo debe despachar la action **`filterCards`** pasándole como argumento **`e.target.value`**.
+¡Diviértete explorando el multiverso de Rick and Morty! 🚀🌌
 
-6. Agrega el atributo **`onChange`** a las etiquetas **`select`** pasándoles las funciones correspondientes a cada una.
-
-<br />
-
----
-
-<br />
-
-### **👩‍💻 EJERCICIO 4 | Forzado de render**
-
-Ahora solo nos queda, en el componente **`Favorites`** crear un estado local que se llama **aux** e inicialo en **`false`**.
-
-Una vez creado, dentro del **handleOrder** setea este estado en su valor opuesto.
-
-<br />
-
-A esta altura, tu filtro y ordenamiento debería estar funcionando de la siguiente manera:
-
-<img src="./img/example.gif" alt="" />
-
-<br />
-
----
-
-## **📌 Extra Credit**
-
-Agrega una opción adicional en el select del filtro para que muestre todos los personajes. Desarrolla la lógica para que ello ocurra.

@@ -25,17 +25,19 @@ export default function Detail (props) {
   }, [id]);
 
   return (
-    <div className={styleDetail.divPrincipal}>
-      <div className={styleDetail.divInfo}>
-        <h1>{character.name}</h1>
-        <h2>STATUS |   {character.status}</h2>
-        <h2>SPECIES | {character.species}</h2>
-        <h2>GENDER | {character.gender}</h2>
-        <h2>ORIGIN | {character.origin?.name}</h2>
-        <h2>LOCATION | {character.location?.name}</h2>
-      </div>
-      <div className={styleDetail.divImg}>
-        <img className={styleDetail.img} src={character.image} alt="" />
+    <div className={styleDetail.divFondo}>
+      <div className={styleDetail.divPrincipal}>
+        <div className={styleDetail.divInfo}>
+          <h1>{character.name}</h1>
+          <h2>STATUS |   {character.status}</h2>
+          <h2>SPECIES | {character.species}</h2>
+          <h2>GENDER | {character.gender}</h2>
+          <h2>ORIGIN | {character.origin?.name}</h2>
+          <h2>LOCATION | {character.location?.name}</h2>
+        </div>
+        <div className={styleDetail.divImg}>
+          <img className={styleDetail.img} src={character.image} alt="" />
+        </div>
       </div>
     </div>
   )

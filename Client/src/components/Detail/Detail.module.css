@@ -4,6 +4,11 @@
   src: url('../../font/NothingYouCouldDo-Regular.ttf') format('truetype');
   /* Si el archivo tiene una extensión diferente, ajusta el valor format según corresponda */
 }
+.divFondo{
+  display: flex;
+  background-image: url('../../asset/cool-rick-and-morty-portal-monster-xk88bje00xmfafks.jpg');
+  background-size: cover;
+}
 .divPrincipal{
   display: flex;
   flex-wrap: wrap;
