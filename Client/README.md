@@ -39,31 +39,35 @@ En esta aplicación, he aplicado varias tecnologías y conceptos interesantes:
 Aqui tienes algunas capturas de pantalla de la aplicación:
 
 <br />
-<img src="./src/asset/Form.jpg" alt="" />
 
 **Formulario para ingresar a la App**
+<img src="./src/asset/Form.jpg" alt="" />
+
 
 <br />
-<img src="./src/asset/Nav.jpg" alt="" />
 
 **Barra de navegación**
+<img src="./src/asset/Nav.jpg" alt="" />
+
 
 <br />
-<img src="./src/asset/Home.jpg" alt="" />
 
 **Presentación de las Cards**
+<img src="./src/asset/Home.jpg" alt="" />
+
 
 <br />
-<img src="./src/asset/Detail.jpg" alt="" />
 
 **Detalles del personaje**
+<img src="./src/asset/Detail.jpg" alt="" />
+
 
 ### ¿Cómo ejecutar la aplicación?
 <br />
 
 1. Clona este repositorio en tu máquina local.
    ```bash
-   git clone https://github.com/tu-usuario/rick-and-morty-app.git
+   git clone https://github.com/jacapera/Rick_and_Morty.git
    ```
 2. Navega al directorio del proyecto.
    ```bash
