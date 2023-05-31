@@ -71,7 +71,7 @@ Aqui tienes algunas capturas de pantalla de la aplicación:
    ```
 2. Navega al directorio del proyecto.
    ```bash
-   cd rick-and-morty-app
+   cd rick_and_morty
    ```
 3. Instala las dependencias.
    ```bash
