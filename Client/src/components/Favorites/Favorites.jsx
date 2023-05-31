@@ -10,7 +10,7 @@ function Favorites(props){
 
     const dispatch = useDispatch();
     const allCharacters = useSelector(state => state.allCharacters)
-    console.log(allCharacters)
+    //console.log(allCharacters)
 
     const handleOrder = (event) => {
         //setAux(!aux);

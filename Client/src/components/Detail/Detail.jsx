@@ -5,16 +5,18 @@ import { useParams } from 'react-router-dom';
 
 
 export default function Detail (props) {
-  console.log(props)
+  //console.log(props)
 
   const [character, setCharacter] = useState({});
   const { id } = useParams();
+  const urlAntigua = `https://rickandmortyapi.com/api/character/${id}`;
+  const urlServerLocal = `http://localhost:3001/rickandmorty/character/${id}`
 
   useEffect(() => {
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-      if (data.name) {
-        setCharacter(data);
-        console.log(data)
+    axios(urlServerLocal).then(({ data }) => {
+      if (data[0].name) {
+        setCharacter(data[0]);
+        //console.log(data)
       } else {
         window.alert('No hay personajes con ese ID');
       }
@@ -25,7 +27,7 @@ export default function Detail (props) {
   return (
     <div className={styleDetail.divPrincipal}>
       <div className={styleDetail.divInfo}>
-        <h1>NAME | {character.name}</h1>
+        <h1>{character.name}</h1>
         <h2>STATUS |   {character.status}</h2>
         <h2>SPECIES | {character.species}</h2>
         <h2>GENDER | {character.gender}</h2>

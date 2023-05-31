@@ -45,25 +45,30 @@ function App() {
    // };
 
    const onSearch = (id)  => {
-      //setCharacters([...characters, example])
-      axios(`https://rickandmortyapi.com/api/character/${id}`)
+      // setCharacters([...characters, example])
+      // `https://rickandmortyapi.com/api/character/${id}`;
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
          .then(({ data }) => {
-            if(!characters.some( card => card.id === data.id)){
-               if (data.name) {
-                  setCharacters((oldChars) => [...oldChars, data]);
+            // console.log(data[0].name);
+            // en el servidor local no me devuelve un objeto {}, me duvuelve un array con un objeto [{}]
+            if(!characters.some( card => card.id === data[0].id)){
+               if (data[0].name) {
+                  setCharacters((oldChars) => [...oldChars, data[0]]);
                } else {
                   window.alert('¡No hay personajes con este ID!');
                }
             } else {
                window.alert('¡Ya agregaste esta Card!');
             }
+            //console.log(characters);
       }).catch(err => {
          window.alert('¡Esta Card no Existe!');
       })
    }
 
    const onRandom = () => {
-      let id = Math.floor(Math.random() * 826) + 1;
+      // 826
+      let id = Math.floor(Math.random() * 5) + 1;
       //console.log(id);
       axios(`https://rickandmortyapi.com/api/character/${id}`)
          .then(({ data }) => {
