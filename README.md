@@ -41,25 +41,25 @@ Aqui tienes algunas capturas de pantalla de la aplicación:
 <br />
 
 **Formulario para ingresar a la App**
-<img src="./src/asset/Form.jpg" alt="" />
+<img src="./Client/src/asset/Form.jpg" alt="login" />
 
 
 <br />
 
 **Barra de navegación**
-<img src="./src/asset/Nav.jpg" alt="" />
+<img src="./Client/src/asset/Nav.jpg" alt="barra navegacion" />
 
 
 <br />
 
 **Presentación de las Cards**
-<img src="./src/asset/Home.jpg" alt="" />
+<img src="./Client/src/asset/Home.jpg" alt="pag principal" />
 
 
 <br />
 
 **Detalles del personaje**
-<img src="./src/asset/Detail.jpg" alt="" />
+<img src="./Client/src/asset/Detail.jpg" alt="detalle personaje" />
 
 
 ### ¿Cómo ejecutar la aplicación?
