@@ -16,15 +16,24 @@ function App() {
    const [characters, setCharacters] = useState([]);
 
    const [access, setAccess] = useState(true);
-   const EMAIL = "ejemplo@gmail.com";
-   const PASSWORD = "123456";
+   // const EMAIL = "ejemplo@gmail.com";
+   // const PASSWORD = "123456";
 
    const navigate = useNavigate();
+
    function login(userData) {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate('/home');
-      }
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`)
+         .then(({data}) => {
+            const { access } = data;
+            setAccess(data);
+            access && navigate('/home');
+         })
+      // if (userData.password === PASSWORD && userData.email === EMAIL) {
+      //    setAccess(true);
+      //    navigate('/home');
+      // }
    }
 
    useEffect(() => {
@@ -49,11 +58,9 @@ function App() {
       // `https://rickandmortyapi.com/api/character/${id}`;
       axios(`http://localhost:3001/rickandmorty/character/${id}`)
          .then(({ data }) => {
-            // console.log(data[0].name);
-            // en el servidor local no me devuelve un objeto {}, me duvuelve un array con un objeto [{}]
-            if(!characters.some( card => card.id === data[0].id)){
-               if (data[0].name) {
-                  setCharacters((oldChars) => [...oldChars, data[0]]);
+            if(!characters.some( card => card.id === data.id)){
+               if (data.name) {
+                  setCharacters((oldChars) => [...oldChars, data]);
                } else {
                   window.alert('¡No hay personajes con este ID!');
                }
@@ -68,10 +75,12 @@ function App() {
 
    const onRandom = () => {
       // 826
-      let id = Math.floor(Math.random() * 5) + 1;
+      let id = Math.floor(Math.random() * 826) + 1;
       //console.log(id);
-      axios(`https://rickandmortyapi.com/api/character/${id}`)
+      // `https://rickandmortyapi.com/api/character/${id}`
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
          .then(({ data }) => {
+            //console.log(data);
             if(!characters.some( card => card.id === data.id)){
                if (data.name) {
                   setCharacters((oldChars) => [...oldChars, data]);

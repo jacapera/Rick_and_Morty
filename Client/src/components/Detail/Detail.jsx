@@ -14,8 +14,8 @@ export default function Detail (props) {
 
   useEffect(() => {
     axios(urlServerLocal).then(({ data }) => {
-      if (data[0].name) {
-        setCharacter(data[0]);
+      if (data.name) {
+        setCharacter(data);
         //console.log(data)
       } else {
         window.alert('No hay personajes con ese ID');

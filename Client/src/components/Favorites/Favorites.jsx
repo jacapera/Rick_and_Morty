@@ -10,7 +10,7 @@ function Favorites(props){
 
     const dispatch = useDispatch();
     const allCharacters = useSelector(state => state.allCharacters)
-    //console.log(allCharacters)
+    console.log(props.myFavorites)
 
     const handleOrder = (event) => {
         //setAux(!aux);
@@ -84,6 +84,6 @@ export default connect(
     mapDispatchToProps
 )(Favorites);
 
-// myFavorites = [4, 170, 3, 17, 38, 39, 88, 94]
+// myFavorites = [4, 170, 3, 17, 38, 39, 88, 94, 332]
 // genderless = [ 333, 372 ]
-// unknown = [ 71, ]
+// unknown = [ 71, 158 ]
