@@ -1,18 +1,20 @@
-import { ADD_FAV, FILTER, ORDER, REMOVE_FAV, SHOW_ALL_FAV } from "./action-types";
+import { ADD_FAV, ERROR, FILTER, ORDER, REMOVE_FAV } from "./action-types";
 
 const initialState = {
     myFavorites: [],
-    allCharacters: []
+    allCharacters: [],
+    errors: false
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case ADD_FAV:
-            console.log(action.payload);
+            //console.log(action.payload);
             return {
                 ...state,
                 myFavorites: action.payload,
-                allCharacters: action.payload
+                allCharacters: action.payload,
+                errors: false
                 //allCharacters: [...state.allCharacters, action.payload],
                 //myFavorites: [...state.allCharacters, action.payload]
             }
@@ -20,9 +22,16 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 myFavorites: action.payload,
+                allCharacters: action.payload,
+                errors: false
                 //allCharacters: action.payload
                 //myFavorites: state.allCharacters.filter(character => character.id !== Number(action.payload)),
                 //allCharacters: state.allCharacters.filter(character => character.id !== Number(action.payload))
+            }
+        case ERROR:
+            return {
+                ...state,
+                errors: action.payload
             }
         case FILTER:
             if(action.payload === "all"){
