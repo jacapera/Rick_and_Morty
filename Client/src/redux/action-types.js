@@ -4,3 +4,4 @@ export const FILTER = "FILTER";
 export const ORDER = "ORDER";
 export const SHOW_ALL_FAV = "SHOW_ALL_FAV";
 export const ERROR = "ERROR";
+export const GET_FAV = "GET_FAV";

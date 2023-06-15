@@ -28,14 +28,16 @@ function App() {
          const URL = 'http://localhost:3001/rickandmorty/login/';
          const resultado = await axios(URL + `?email=${email}&password=${password}`);
          const {access} = resultado.data;
+         console.log(resultado);
          if(access){
             setAccess(access);
             access && navigate('/home');
-         } else {
-            window.alert('Contraseña o Password incorrecto');
-         }
+         } //else {
+            //window.alert(resultado.data);
+         //}
       } catch (error) {
-         console.log(error.message);
+         //console.log(error)
+         window.alert(error.response.data.message);
       }
       // if (userData.password === PASSWORD && userData.email === EMAIL) {
       //    setAccess(true);

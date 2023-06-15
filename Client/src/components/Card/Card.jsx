@@ -1,7 +1,7 @@
 import styleCard from './Card.module.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addFav, removeFav } from '../../redux/action';
+import { addFav, changeErrors, removeFav } from '../../redux/action';
 import { useEffect, useState } from 'react';
 
 function Card(props) {
@@ -10,8 +10,14 @@ function Card(props) {
    const [isFav, setIsFav] = useState(false);
 
    const handleFavorite =  () => {
-      isFav ? props.removeFav(props.id) : props.addFav(props);
-      setIsFav(!isFav)
+      if(props.errors === false){
+         isFav ? props.removeFav(props.id) : props.addFav(props);
+         setIsFav(!isFav)
+      }else{
+         window.alert(props.errors)
+         props.changeError();
+         setIsFav(!isFav)
+      }
    };
 
    useEffect(() => {
@@ -21,7 +27,6 @@ function Card(props) {
          }
       })
    }, [props.myFavorites])
-
 
    const style = {
       backgroundColor: 'gray',
@@ -60,14 +65,16 @@ function Card(props) {
 
 const mapStateToProps = (state) => {
    return {
-      myFavorites: state.myFavorites
+      myFavorites: state.myFavorites,
+      errors: state.errors
    }
 };
 
 const mapDispatchToProps = (dispatch) => {
    return {
       addFav: (character) => dispatch(addFav(character)),
-      removeFav: (id) => dispatch(removeFav(id))
+      removeFav: (id) => dispatch(removeFav(id)),
+      changeError: () => dispatch(changeErrors())
    }
 };
 

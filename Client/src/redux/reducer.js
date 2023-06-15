@@ -1,4 +1,4 @@
-import { ADD_FAV, ERROR, FILTER, ORDER, REMOVE_FAV } from "./action-types";
+import { ADD_FAV, ERROR, FILTER, GET_FAV, ORDER, REMOVE_FAV } from "./action-types";
 
 const initialState = {
     myFavorites: [],
@@ -27,6 +27,12 @@ const reducer = (state = initialState, action) => {
                 //allCharacters: action.payload
                 //myFavorites: state.allCharacters.filter(character => character.id !== Number(action.payload)),
                 //allCharacters: state.allCharacters.filter(character => character.id !== Number(action.payload))
+            }
+        case GET_FAV:
+            return {
+                ...state,
+                myFavorites: action.payload,
+                allCharacters: action.payload,
             }
         case ERROR:
             return {

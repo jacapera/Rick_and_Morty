@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+Server:
+npm i --dev nodemon
+npm i express
+npm i axios
+npm i cors
+npm i dotenv
+npm i morgan
+npm i --dev sequelize pg pg-hstore
+
+
+Server-test:
+npm i jest
+npm i supertest

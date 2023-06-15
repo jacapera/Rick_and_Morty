@@ -1,4 +1,4 @@
-import { ADD_FAV, ERROR, FILTER, ORDER, REMOVE_FAV, SHOW_ALL_FAV } from "./action-types";
+import { ADD_FAV, ERROR, FILTER, GET_FAV, ORDER, REMOVE_FAV, SHOW_ALL_FAV } from "./action-types";
 import axios from 'axios';
 
 // export const addFav = (character) => {
@@ -13,6 +13,25 @@ import axios from 'axios';
 //             });
 //     };
 // };
+
+export const getFav = () => {
+    const endpoint = 'http://localhost:3001/rickandmorty/fav';
+    return async (dispatch) => {
+        try {
+            const {data} = await axios.get(endpoint);
+            return dispatch({
+                type: GET_FAV,
+                payload: data
+            })
+        } catch (error) {
+            return dispatch({
+                type: ERROR,
+                payload: error.response.data.message
+            })
+        }
+    }
+};
+
 export const addFav = (character) => {
     const endpoint = 'http://localhost:3001/rickandmorty/fav';
     return async (dispatch) => {
@@ -25,7 +44,7 @@ export const addFav = (character) => {
         } catch (error) {
             return dispatch({
                 type: ERROR,
-                payload: error.message
+                payload: error.response.data.message
             })
         }
     }
@@ -48,6 +67,13 @@ export const removeFav = (id) => {
         }
     }
 };
+
+export const changeErrors = () => {
+    return {
+        type: ERROR,
+        payload: false
+    }
+}
 
 export const filterCards = (gender) => {
     return {

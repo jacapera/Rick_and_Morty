@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 import Card from "../Card/Card";
-import { filterCards, orderCards, removeFav } from "../../redux/action";
+import { filterCards, getFav, orderCards, removeFav } from "../../redux/action";
 import styleFav from './Favorites.module.css'
 
 function Favorites(props){
@@ -28,6 +28,10 @@ function Favorites(props){
     const onClose = (id) => {
         props.removeFav(id);
     };
+
+    useEffect(() => {
+        props.getFav();
+    }, []);
 
     return (
         <div>
@@ -75,7 +79,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        removeFav: (id) => dispatch(removeFav(id))
+        removeFav: (id) => dispatch(removeFav(id)),
+        getFav: () => dispatch(getFav())
     }
 };
 
@@ -85,5 +90,5 @@ export default connect(
 )(Favorites);
 
 // myFavorites = [4, 170, 3, 17, 38, 39, 88, 94, 332]
-// genderless = [ 333, 372 ]
-// unknown = [ 71, 158 ]
+// genderless = [ 333, 372, 555 ]
+// unknown = [ 71, 158, 194, 95 ]
