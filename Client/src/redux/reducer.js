@@ -1,6 +1,7 @@
-import { ADD_FAV, ERROR, FILTER, GET_FAV, ORDER, REMOVE_FAV } from "./action-types";
+import { ADD_FAV, ADD_USER, ERROR, FILTER, GET_FAV, ORDER, REMOVE_FAV } from "./action-types";
 
 const initialState = {
+    users: [],
     myFavorites: [],
     allCharacters: [],
     errors: false
@@ -8,6 +9,12 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
+        case ADD_USER:
+            return {
+                ...state,
+                users: action.payload.user,
+                errors: action.payload.msg
+            }
         case ADD_FAV:
             //console.log(action.payload);
             return {

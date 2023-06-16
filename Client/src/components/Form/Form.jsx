@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styleForm from './Form.module.css';
 import validation from './validation';
+import { Link } from 'react-router-dom';
 
 
 export default function Form(props) {
@@ -49,6 +50,10 @@ export default function Form(props) {
           <hr style={{backgroundColor:'aqua', margin:'7px', width:'100%', height:'1px'}} />
           <button className={styleForm.button} type='submit'>Entrar</button>
         </form>
+        <div className={styleForm.divRegister}>
+          <h3>¿No tienes cuenta?</h3>
+          <Link className={styleForm.messageLink} to={'/register'}>Registrate</Link>
+        </div>
       </div>
     </div>
   )

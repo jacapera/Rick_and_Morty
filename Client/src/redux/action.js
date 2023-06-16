@@ -1,4 +1,4 @@
-import { ADD_FAV, ERROR, FILTER, GET_FAV, ORDER, REMOVE_FAV, SHOW_ALL_FAV } from "./action-types";
+import { ADD_FAV, ADD_USER, ERROR, FILTER, GET_FAV, ORDER, REMOVE_FAV, SHOW_ALL_FAV } from "./action-types";
 import axios from 'axios';
 
 // export const addFav = (character) => {
@@ -63,6 +63,25 @@ export const removeFav = (id) => {
             return dispatch({
                 type: ERROR,
                 payload: error.message
+            })
+        }
+    }
+};
+
+export const addUser = (user) => {
+    const endpoint = 'http://localhost:3001/rickandmorty/user';
+    return async (dispatch) => {
+        try {
+            const { data } = await axios.post(endpoint, user);
+            console.log(data.message)
+            return dispatch({
+                type: ADD_USER,
+                payload: { user:data.user, msg: data.message }
+            })
+        } catch (error) {
+            return dispatch({
+                type: ERROR,
+                payload: await error.response.data.message
             })
         }
     }

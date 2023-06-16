@@ -13,7 +13,7 @@ const router = express.Router();
 router.get('/character/:id', getCharById);
 router.get('/login', login);
 router.get('/fav', getFav);
-router.post('/login', postUser);
+router.post('/user', postUser);
 router.post("/fav", postFav);
 router.delete("/fav/:id", deleteFav);
 

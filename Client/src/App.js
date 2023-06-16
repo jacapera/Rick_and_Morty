@@ -9,6 +9,7 @@ import About from '../src/components/About/About'
 import Detail from './components/Detail/Detail';
 import Form from './components/Form/Form';
 import Favorites from './components/Favorites/Favorites';
+import Register from './components/Register/Register.jsx';
 //import SearchBar from './components/SearchBar.jsx';
 //import characters, { Rick } from './data.js';
 
@@ -28,7 +29,7 @@ function App() {
          const URL = 'http://localhost:3001/rickandmorty/login/';
          const resultado = await axios(URL + `?email=${email}&password=${password}`);
          const {access} = resultado.data;
-         console.log(resultado);
+         //console.log(resultado);
          if(access){
             setAccess(access);
             access && navigate('/home');
@@ -118,7 +119,7 @@ function App() {
    return (
       <div className='App'>
          {
-            location.pathname !== "/" &&
+            location.pathname !== "/" && location.pathname !== "/register" &&
                <Nav
                   onSearch={onSearch}
                   onRandom={onRandom}
@@ -129,6 +130,7 @@ function App() {
          {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
             <Routes>
                <Route path='/' element={<Form login={login} />}/>
+               <Route path='/register' element={ <Register /> } />
                <Route path={"/home"} element={<Cards characters={characters} onClose = {onClose} />}/>
                <Route path={'/about'} element={ <About /> } />
                <Route path={'/detail/:id'} element={ <Detail /> } />

@@ -57,8 +57,9 @@
 }
 
 .labelForm{
+  font-family: 'Get IndieFlower-Regular';
   color:antiquewhite;
-  font-size: 1.3rem;
+  font-size: 3rem;
   text-align: end;
   align-items: center;
   width: auto;
@@ -83,9 +84,10 @@
 }
 
 .button {
+  font-family: 'Get IndieFlower-Regular';
   display: inline-block;
-  padding: 10px 22px;
-  font-size: 16px;
+  padding: 8px 20px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -95,12 +97,32 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .button:hover {
   background-color: #ffbb00;
   transform: scale(1.1)
+}
+
+.divRegister{
+  font-family: 'Get IndieFlower-Regular';
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+.messageLink{
+  color: aqua;
+  text-decoration: none;
+}
+.messageLink:hover{
+  font-size: 1.3rem;
+  color: red;
+  text-decoration: underline;
 }
 
 /* Estilos para teléfonos móviles pequeños (portrait) */
